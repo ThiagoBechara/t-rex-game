@@ -130,10 +130,11 @@ function draw(){
        somCheckpoint.play();
        }
     
-    if(keyDown("up")&& trex.y>160){
+    if(touches.length>0 || keyDown("up")&& trex.y>160){
    
     trex.velocityY = -10;
-    somJump.play()
+    somJump.play();
+    touches=[];
   }
   trex.velocityY = trex.velocityY + 0.8;
     
